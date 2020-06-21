@@ -4,7 +4,7 @@
 #          実際のユーザー名
 #    ルール：
 #          ・ユーザー名は４文字以上２０文字以下である
-#    できること：
+#    できること==>メソッド
 #          ・ユーザー名を大文字に変換する
 
 class Username():
@@ -13,9 +13,15 @@ class Username():
             raise ValueError(f"{name}は文字数のルール違反やで！")
         self.name = name
 
+    def screen_name(self):
+        return self.name.upper()
+
 
 # UserNameクラスのインスタンス化
 hibiki = Username(name="hibiki")
+#
+print(hibiki.screen_name())
+# print(hibiki.name.upper())
 
 # print(hibiki)
 # print(type(hibiki))
@@ -23,4 +29,4 @@ hibiki = Username(name="hibiki")
 
 # sho = Username("sho")
 # print(sho.name)
-tom = Username("tom")
+# tom = Username("tom")
